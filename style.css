@@ -1,0 +1,226 @@
+/* навигация */
+body {
+    background: linear-gradient(to right, snow, pink);
+    background-attachment: fixed;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Ubuntu-Regular";
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+@font-face{
+    font-family: "Ubuntu-Italic";
+    src: url(fonts/Ubuntu-Italic.ttf);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    height: 7dvh;
+    min-height: 60px;
+    max-height: 80px;
+    padding: 0 5dvw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Ubuntu-Regular';
+}
+
+nav strong {
+    color: white;
+    font-size: clamp(14px, 2dvw, 18px);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    font-size: clamp(12px, 1.8dvw, 16px);
+    text-decoration: none;
+    padding: clamp(4px, 1dvh, 8px) clamp(8px, 2dvw, 16px);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin: 0 clamp(2px, 0.5dvw, 5px);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*стили для основного контента */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-family: 'Ubuntu-Italic';
+    color: #333;
+    line-height: 1.6;
+    background:#FFEEFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 30px 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(24px, 5dvw, 36px);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: clamp(20px, 4dvw, 28px);
+    border-bottom: 2px solid #c44569;
+    padding-bottom: 6px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: clamp(18px, 3.5dvw, 24px);
+    margin-top: 20px;
+    color: #6a0dad;
+}
+
+p, ul, li {
+    font-size: clamp(14px, 2.5dvw, 18px);
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Секция аватара */
+.ava {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #c44569;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-row img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.avatar-row div p:first-child {
+    font-size: clamp(20px, 4dvw, 26px);
+    font-weight: bold;
+    color: #6a0dad;
+}
+
+.avatar-row div p:last-child {
+    font-size: clamp(16px, 3dvw, 20px);
+    color: #c44569;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Образование — таблицы и изображения */
+section#education table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+section#education table td {
+    padding: 6px 0;
+    font-size: clamp(14px, 2.5dvw, 16px);
+}
+
+section#education img,
+section#skills img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+section#education p,
+section#education a {
+    margin: 8px 0;
+    display: block;
+}
+
+section#education a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section#education a:hover {
+    text-decoration: underline;
+}
+
+/* Видео */
+section#skills video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Ubuntu-Regular', sans-serif;
+    color: #555;
+    font-size: clamp(14px, 2.5dvw, 16px);
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
